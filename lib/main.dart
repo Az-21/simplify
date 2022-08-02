@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simplify/pages/home/home_page.dart';
 import 'package:simplify/resources/theme.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: greenLightTheme,
       darkTheme: greenDarkTheme,
       themeMode: ThemeMode.system,
-      home: //TODO,
+      home: const HomePage(),
     );
   }
 }
