@@ -22,7 +22,12 @@ class NavigationDrawerItem extends StatelessWidget {
       child: ListTile(
         leading: Icon(icon),
         title: Text(page.name),
-        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => GeneratePageDestination(destination: page))),
+        onTap: () {
+          // First close the navigation drawer
+          Navigator.of(context).pop();
+          // Then navigate to new page
+          Navigator.push(context, MaterialPageRoute(builder: (context) => GeneratePageDestination(destination: page)));
+        },
       ),
     );
   }
