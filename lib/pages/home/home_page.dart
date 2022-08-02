@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:simplify/components/drawer/drawer.dart';
+import 'package:simplify/components/drawer/logic/page_list.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -6,11 +8,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      /* ------------------------------------ - ----------------------------------- */
-      appBar: AppBar(
-        title: const Text("Simplify"),
-      ),
-      /* ------------------------------------ - ----------------------------------- */
+      /* ---------------------------------- Style --------------------------------- */
+      appBar: AppBar(title: const Text("Welcome")),
+      drawer: const NavigationDrawer(root: PageList.Home),
+
+      /* --------------------------------- Content -------------------------------- */
     );
   }
 }
