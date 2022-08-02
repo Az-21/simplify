@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simplify/pages/home/home_page.dart';
+import 'package:simplify/pages/home/page.dart';
 import 'package:simplify/resources/theme.dart';
 
 void main() {
