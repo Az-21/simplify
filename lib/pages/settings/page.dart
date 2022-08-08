@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:simplify/components/drawer/drawer.dart';
 import 'package:simplify/components/drawer/logic/page_list.dart';
 import 'package:simplify/pages/settings/components/case.dart';
+import 'package:simplify/pages/settings/components/cleanup/curved_brackets.dart';
 import 'package:simplify/pages/settings/components/heading.dart';
 import 'package:simplify/pages/settings/components/info.dart';
 import 'package:simplify/pages/settings/components/options.dart';
@@ -30,6 +31,10 @@ class SettingsPage extends StatelessWidget {
           SmartSentenceCaseSwitch(),
           HardSentenceCaseSwitch(),
           OptimizeArticlesSwitch(),
+
+          /* ----------------------------- Cleanup Options ---------------------------- */
+          SettingHeader(heading: "Cleanup Setting"),
+          CurvedBracketOption(),
         ],
       ),
     );
