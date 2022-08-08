@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:simplify/components/drawer/drawer.dart';
 import 'package:simplify/components/drawer/logic/page_list.dart';
-import 'package:simplify/pages/settings/components/case.dart';
+import 'package:simplify/pages/settings/components/case/lowercase.dart';
+import 'package:simplify/pages/settings/components/case/sentencecase_normal.dart';
+import 'package:simplify/pages/settings/components/case/sentencecase_smart.dart';
+import 'package:simplify/pages/settings/components/case/titlecase_normal.dart';
+import 'package:simplify/pages/settings/components/case/titlecase_smart.dart';
+import 'package:simplify/pages/settings/components/case/uppercase.dart';
 import 'package:simplify/pages/settings/components/cleanup/curved_brackets.dart';
 import 'package:simplify/pages/settings/components/heading.dart';
 import 'package:simplify/pages/settings/components/info.dart';
-import 'package:simplify/pages/settings/components/options.dart';
+import 'package:simplify/pages/settings/components/general/ascii.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({Key? key}) : super(key: key);
@@ -24,13 +29,16 @@ class SettingsPage extends StatelessWidget {
 
           /* ----------------------------- General options ---------------------------- */
           SettingHeader(heading: "General Options"),
-          AsciiOnlySwitch(),
+          AsciiOnlyOption(),
 
           /* ----------------------------- Case Modifiers ----------------------------- */
           SettingHeader(heading: "Case Setting"),
-          SmartSentenceCaseSwitch(),
-          HardSentenceCaseSwitch(),
-          OptimizeArticlesSwitch(),
+          TitleCaseOption(),
+          SmartTitleCaseOption(),
+          SentenceCaseOption(),
+          SmartSentenceCaseOption(),
+          LowerCaseOption(),
+          UpperCaseOption(),
 
           /* ----------------------------- Cleanup Options ---------------------------- */
           SettingHeader(heading: "Cleanup Setting"),

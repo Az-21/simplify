@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 ///
 /* ----------------------- Remove non-ASCII characters ---------------------- */
 /// Constant fields
-const String _asciiOnlySettingTitle = "Remove foreign characters";
-const String _asciiOnlySettingSubtitle = "Remove non-ASCII (non-English) characters.";
+const String _title = "Remove foreign characters";
+const String _subtitle = "Remove non-ASCII (non-English) characters.";
 
-class AsciiOnlySwitch extends StatefulWidget {
-  const AsciiOnlySwitch({Key? key}) : super(key: key);
+class AsciiOnlyOption extends StatefulWidget {
+  const AsciiOnlyOption({Key? key}) : super(key: key);
   @override
-  State<AsciiOnlySwitch> createState() => _AsciiOnlySwitchState();
+  State<AsciiOnlyOption> createState() => _AsciiOnlyOptionState();
 }
 
-class _AsciiOnlySwitchState extends State<AsciiOnlySwitch> {
+class _AsciiOnlyOptionState extends State<AsciiOnlyOption> {
   /// Field
   bool isEnabled = true;
 
@@ -20,9 +20,9 @@ class _AsciiOnlySwitchState extends State<AsciiOnlySwitch> {
   Widget build(BuildContext context) {
     return ListTile(
       leading: const Icon(Icons.local_library),
-      title: const Text(_asciiOnlySettingTitle),
-      subtitle: const Text(_asciiOnlySettingSubtitle),
-      onLongPress: () => ShowAsciiOnlySettingInfoDialog(context),
+      title: const Text(_title),
+      subtitle: const Text(_subtitle),
+      onLongPress: () => _MoreInfoPopup(context),
       trailing: Switch(
         value: isEnabled,
         onChanged: (value) => setState(() {
@@ -33,19 +33,19 @@ class _AsciiOnlySwitchState extends State<AsciiOnlySwitch> {
   }
 
   /* ----------------------------- More info popup ---------------------------- */
-  void ShowAsciiOnlySettingInfoDialog(BuildContext context) {
+  void _MoreInfoPopup(BuildContext context) {
     showDialog(
         context: context,
         builder: (context) {
           return AlertDialog(
-            title: const Text(_asciiOnlySettingTitle),
+            title: const Text(_title),
             content: SizedBox(
               width: (2 / 3) * MediaQuery.of(context).size.width,
               height: (1 / 3) * MediaQuery.of(context).size.height,
               child: ListView(
                 children: [
                   Text("• Description", style: Theme.of(context).textTheme.labelLarge),
-                  const Text(_asciiOnlySettingSubtitle),
+                  const Text(_subtitle),
                   const SizedBox(height: 32),
                   //
                   Text("• Sample Input", style: Theme.of(context).textTheme.labelLarge),
