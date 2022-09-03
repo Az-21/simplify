@@ -8,6 +8,7 @@ import 'package:simplify/pages/settings/components/case/titlecase_normal.dart';
 import 'package:simplify/pages/settings/components/case/titlecase_smart.dart';
 import 'package:simplify/pages/settings/components/case/uppercase.dart';
 import 'package:simplify/pages/settings/components/cleanup/curved_brackets.dart';
+import 'package:simplify/pages/settings/components/cleanup/square_brackets.dart';
 import 'package:simplify/pages/settings/components/heading.dart';
 import 'package:simplify/pages/settings/components/info.dart';
 import 'package:simplify/pages/settings/components/general/ascii.dart';
@@ -43,6 +44,7 @@ class SettingsPage extends StatelessWidget {
           /* ----------------------------- Cleanup Options ---------------------------- */
           SettingHeader(heading: "Cleanup Setting"),
           CurvedBracketOption(),
+          SquareBracketOption(),
         ],
       ),
     );
