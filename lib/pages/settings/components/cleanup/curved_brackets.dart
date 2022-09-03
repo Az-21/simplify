@@ -17,7 +17,7 @@ class _CurvedBracketOptionState extends State<CurvedBracketOption> {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: const Icon(Icons.description),
+      leading: const Icon(Icons.blur_circular),
       title: const Text(_title),
       subtitle: const Text(_subtitle),
       onLongPress: () => _MoreInfoPopup(context),

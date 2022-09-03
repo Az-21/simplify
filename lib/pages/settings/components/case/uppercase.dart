@@ -17,7 +17,7 @@ class _UpperCaseOptionState extends State<UpperCaseOption> {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: const Icon(Icons.arrow_upward),
+      leading: const Icon(Icons.arrow_circle_up),
       title: const Text(_title),
       subtitle: const Text(_subtitle),
       onLongPress: () => _MoreInfoPopup(context),

@@ -17,7 +17,7 @@ class _LowerCaseOptionState extends State<LowerCaseOption> {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: const Icon(Icons.arrow_downward),
+      leading: const Icon(Icons.arrow_circle_down),
       title: const Text(_title),
       subtitle: const Text(_subtitle),
       onLongPress: () => _MoreInfoPopup(context),
