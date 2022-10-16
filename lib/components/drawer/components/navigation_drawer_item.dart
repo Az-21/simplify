@@ -23,10 +23,7 @@ class NavigationDrawerItem extends StatelessWidget {
         leading: Icon(icon),
         title: Text(page.name),
         onTap: () {
-          // First close the navigation drawer
-          Navigator.of(context).pop();
-          // Then navigate to new page
-          Navigator.push(context, MaterialPageRoute(builder: (context) => GeneratePageDestination(destination: page)));
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => GeneratePageDestination(destination: page)));
         },
       ),
     );
