@@ -11,6 +11,7 @@ class NavigationDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      elevation: 0,
       child: ListView(
         children: [
           NavigationDrawerItem(icon: Icons.home_rounded, page: PageList.Home, root: root),
